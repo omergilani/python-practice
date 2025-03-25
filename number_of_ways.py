@@ -21,8 +21,10 @@ def numberOfWays(startPos: int, endPos: int, k: int) -> int:
 
     # loop k times
     for i in tqdm(range(k)):
-        for path in paths:
-            new_path = path.copy()
+        #for path in paths:
+        for _ in range(len(paths)):
+            new_path = paths.pop(0)
+            #new_path = path.copy()
             last_position = new_path[-1]
 
             # exist fast if not going to make to end
