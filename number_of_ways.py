@@ -11,12 +11,13 @@ def numberOfWays(startPos: int, endPos: int, k: int) -> int:
     number line. With one step, you can move either one position to the left,
     or one position to the right.
     
+    
     Given a positive integer k, return the number of different ways to
     reach the position endPos starting from startPos, such that you
     perform exactly k steps.
     """
     # start with path of length 1
-    paths = [startPos]
+    paths = [[startPos]]
 
     # loop k times
     for i in tqdm(range(k)):
