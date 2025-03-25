@@ -21,10 +21,10 @@ def numberOfWays(startPos: int, endPos: int, k: int) -> int:
 
     # loop k times
     for i in tqdm(range(k)):
-        #for path in paths:
+        # for path in paths:
         for _ in range(len(paths)):
             new_path = paths.pop(0)
-            #new_path = path.copy()
+            # new_path = path.copy()
             last_position = new_path[-1]
 
             # exist fast if not going to make to end
@@ -61,6 +61,7 @@ def test_number_of_ways():
     It can be proven that no other way is possible, so we return 3.
     """
     print(numberOfWays(1, 2, 3))
+
 
 if __name__ == "__main__":
     test_number_of_ways()
